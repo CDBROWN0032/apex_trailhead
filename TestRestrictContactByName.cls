@@ -4,7 +4,9 @@ public class TestRestrictContactByName {
         Contact c = new Contact(LastName='ValidName');
         insert c;
         Test.startTest();
-        List<contact> verification = [SELECT LastName FROM Contact WHERE LastName=:c.LastName];
+        List<contact> verification = [SELECT LastName 
+                                        FROM Contact 
+                                        WHERE LastName=:c.LastName];
         Test.stopTest();
         integer verificationNumber = 1;
         integer resultNumber = verification.size();
