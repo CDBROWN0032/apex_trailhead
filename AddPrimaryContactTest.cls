@@ -14,7 +14,7 @@ public class AddPrimaryContactTest {
         	accList.add(acc);
     	}
         insert accList;
-		Contact c = new Contact(LastName = 'CA');    
+		Contact c = new Contact(LastName = 'test');    
         AddPrimaryContact apc = new AddPrimaryContact(c, 'CA');
         test.startTest();
         system.enqueueJob(apc);
